@@ -14,6 +14,7 @@ describe("useHash", () => {
       window.location.hash = '#newhash';
       window.dispatchEvent(new HashChangeEvent('hashchange'));
     });
+
     expect(result.current[0]).toBe('#newhash');
   });
 })
