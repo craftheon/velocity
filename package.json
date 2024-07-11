@@ -1,15 +1,11 @@
 {
   "name": "code-challenge",
   "private": true,
-  "description": "",
   "scripts": {
     "dev": "pnpm -r run dev",
     "build": "pnpm -r run build",
     "test": "pnpm -r run test"
   },
-  "workspaces": [
-    "challenges/*"
-  ],
   "keywords": [],
   "author": "",
   "license": "MIT"
