@@ -1,5 +1,5 @@
 "use client"
- 
+
 import { z } from "zod"
 // @ts-ignore
 import { useForm } from "react-hook-form"
@@ -9,7 +9,7 @@ import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 
 const formSchema = z.object({
-  username: z.string().min(2, 
+  username: z.string().min(2,
     {
       message: "Username must be at least 2 characters.",
     }
@@ -35,6 +35,7 @@ export default function FormPage() {
 
   return (
     <main className="m-10">
+      <h1>Form Page</h1>
       <Form {...form}>
         <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-5">
           <FormField
