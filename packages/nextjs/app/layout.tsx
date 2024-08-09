@@ -1,4 +1,3 @@
-import StoreProvider from '@/store/store-provider'
 import './globals.css'
 import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
@@ -18,9 +17,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={inter.className}>
-        <StoreProvider count={0}>
-          {children}
-        </StoreProvider>
+        {children}
       </body>
     </html>
   )
