@@ -9,13 +9,13 @@
  * @param {number[]} nums
  * @return {boolean}
  */
-var containsDuplicate = function(nums) {
-    const exist = new Set()
-    for(let i = 0; i < nums.length; i++) {
-      if (exist.has(nums[i])) return true
-      exist.add(nums[i])
-    }
-    return false
+var containsDuplicate = function (nums) {
+  const exist = new Set()
+  for (let i = 0; i < nums.length; i++) {
+    if (exist.has(nums[i])) return true
+    exist.add(nums[i])
+  }
+  return false
 };
 // @lc code=end
 
