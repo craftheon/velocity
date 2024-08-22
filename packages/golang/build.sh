@@ -8,7 +8,7 @@ function compile() {
   GOOS=linux
   GOARCH=amd64
   go mod tidy
-  go build -o bin ./cmd/main.go
+  go build -o main ./cmd/main.go
 }
 
 function make_output() {
@@ -16,14 +16,8 @@ function make_output() {
     compile &&
       rm -rf dist &&
       mkdir -p dist &&
-      mkdir -p dist/bin &&
-      mkdir -p dist/data &&
-      mkdir -p dist/lib &&
-      mkdir -p dist/log &&
-      mkdir -p dist/testDoc &&
-      mkdir -p dist/unittest &&
-      mkdir -p dist/cache &&
-      cp ./bin dist/bin
+      cp ./main dist
+      rm -rf ./main
   ) || {
     echo "[make output error]"
     exit 1

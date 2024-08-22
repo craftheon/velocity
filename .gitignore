@@ -27,4 +27,3 @@ coverage
 
 yarn.lock
 package-json.lock
-bin
