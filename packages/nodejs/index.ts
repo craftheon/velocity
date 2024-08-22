@@ -5,7 +5,16 @@ const fastify = Fastify({
 })
 
 fastify.get('/', function (request, reply) {
-  reply.send({ hello: 'world' })
+  let count = 0
+  reply.raw.write(`<html><body>`)
+  const timer = setInterval(() => {
+    reply.raw.write(`#`)
+    count ++
+    if (count === 20) {
+      clearInterval(timer)
+      reply.raw.end('Done </body></html>');
+    }
+  }, 1000)
 })
 
 // Run the server!
@@ -14,5 +23,5 @@ fastify.listen({ port: 3000 }, function (err, address) {
     fastify.log.error(err)
     process.exit(1)
   }
-  // Server is now listening on ${address}
+  fastify.log.info(`Server is now listening on ${address}`)
 })
