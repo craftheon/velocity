@@ -1,12 +1,13 @@
 {
-  "name": "code-challenge",
+  "name": "hexagon-warrior",
+  "version": "1.0.0",
   "private": true,
+  "workspaces": [
+    "apps/*",
+    "packages/*",
+    "e2e/*"
+  ],
   "scripts": {
-    "dev": "pnpm -r run dev",
-    "build": "pnpm -r run build",
-    "test": "pnpm -r run test"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "MIT"
+    "dev": "echo \"Error: no test specified\" && exit 1"
+  }
 }
